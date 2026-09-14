@@ -542,6 +542,79 @@ h2 span {
     justify-content: space-between
 }
 
+/* Whats */
+
+.content-whats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    bottom: 25px;
+    right: 25px;
+}
+
+.content-whats a.btnWhats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    background: #25d366;
+    color: #FFFFFF;
+    border-radius: 100%;
+    box-shadow: 1px 6px 24px 0 rgba(7, 94, 84, 0.24);
+    transition: background .5s ease;
+    /* cursor: pointer; */
+    /* will-change: background-color, width; */
+}
+
+.content-whats a.btnWhats:hover {
+    background: #128c7e;
+    transition: background 1.5s linear;
+}
+
+.content-whats a.btnWhats .tooltip-whats {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 120%;
+    width: max-content;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 5px 15px;
+    animation: 20s linear 5s 1 normal both;
+    opacity: 0;
+    transition: opacity .3s ease-out .4s;
+    transition-delay: 0s !important;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, .4));
+    transform: translateZ(0);
+    pointer-events: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-whats a.btnWhats .tooltip-whats::after {
+    content: "";
+    /* display: block; */
+    position: absolute;
+    /* top: 10px; */
+    right: -6px;
+    border: 8px solid transparent;
+    border-width: 6px 0 6px 8px;
+    border-left-color: #fff;
+}
+
+.content-whats a.btnWhats:hover .tooltip-whats {
+    opacity: 1 !important;
+    animation: none !important;
+    transition: opacity .2s !important;
+    transition-delay: 0.5s !important;
+}
+
+/* Whats */
+
 @media(max-width:850px) {
     .nav-links {
         gap: 17px
